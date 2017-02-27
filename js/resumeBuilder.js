@@ -206,7 +206,7 @@ var portfolio = {
 very basic website that was developed purely in html and css. My focus was to try new things with the large buttons to make them responsive to a \
 changing viewport as well as ensure that the top navigation area was consistent through each page as it loads.",
 		"overlayText": "Simple 4 page website done purely in html and css",
-		"images": ["project_01-01.jpg","project_01-02.jpg","project_01-03.jpg","project_01-04.jpg"]
+		"images": ["project_01-01.JPG","project_01-02.JPG","project_01-03.JPG","project_01-04.JPG"]
 	},{
 		"projectTitle": "Python Fill-in-the-Blanks Quiz",
 		"description": "This project was an Intro to Programming Nanodegree assignment through udacity.com. It is done completely in python \
@@ -215,7 +215,7 @@ user selects. Once you select a difficulty, you will be asked to give a number o
 break proof by accounting for answers that would not be acceptable.  Once you have completed a quiz you will be asked if you would like to \
 try another one.",
 		"overlayText": "Python fill-in-the-blanks quiz",
-		"images": ["project_02-01.jpg","project_02-02.jpg","project_02-03.jpg","project_02-04.jpg"]
+		"images": ["project_02-01.JPG","project_02-02.JPG","project_02-03.JPG","project_02-04.JPG"]
 	},{
 		"projectTitle": "Movie Trailer Website",
 		"description": "This was a fun project to do during the Intro to Programming Nanodegree at udacity.com. It is a simple movie info / trailer \
@@ -224,7 +224,7 @@ the web page is dynamically populated with all of the movies and info that was l
 how powerful the backend can be in a very approachable way. I opted to add a bit more functionality to the project by dispalying each movie's \
 release year, rating and a brief summary on the home page.",
 		"overlayText": "One page website that collects data from pyton files and launches a page with movie information",
-		"images": ["project_03-01.jpg","project_03-02.jpg","project_03-03.jpg","project_03-04.jpg"]
+		"images": ["project_03-01.JPG","project_03-02.JPG","project_03-03.JPG","project_03-04.JPG"]
 	}]
 };
 portfolio.display = function(){
