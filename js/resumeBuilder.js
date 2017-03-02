@@ -14,6 +14,7 @@ var bio = {
 	"biopic":"images/vitalogyHome-Green.png"
 };
 bio.display = function(){
+  	var i;
 	var newHTMLheaderName = HTMLheaderName.replace("%data%",bio.name);
 	$("#bioName").append(newHTMLheaderName);
 	var newHTMLlocation = HTMLlocation.replace("%data%",bio.contacts.location);
@@ -60,7 +61,7 @@ bio.display = function(){
 	$("#biopic").append(newHTMLbioPic);
 
 	$("#skillsHeading").append(HTMLskillsStart);
-	for(var i=0; i < bio.skills.length; i++){//FOR LOOP EXAMPLE
+	for(i=0; i < bio.skills.length; i++){//FOR LOOP EXAMPLE
 		var newHTMLskills = HTMLskills.replace("%data%",bio.skills[i]);
 
 		$("#skills").append(newHTMLskills);
@@ -101,9 +102,11 @@ var projects = {
 	}]
 };
 projects.display = function(){
+  	var i;
 	if(projects.projects.length > 0){
+    var newHTMLprojectImage;
 		$("#projectStart").append(HTMLprojectStart);
-		for(var i=0; i < projects.projects.length; i++){
+		for(i=0; i < projects.projects.length; i++){
 			var modalNum = (i+1);
 
 			var newHTMLprojectTitle = HTMLprojectTitle.replace(/%modalNum%/g, modalNum)
@@ -118,13 +121,13 @@ projects.display = function(){
 			for(var j=0; j < projects.projects[i].images.length; j++){
 
 				if(j===0){
-					var newHTMLprojectImage = HTMLprojectImage.replace("item", "item active");
+					newHTMLprojectImage = HTMLprojectImage.replace("item", "item active");
 				}
 
 				newHTMLprojectImage = newHTMLprojectImage.replace("%projectImage%", projects.projects[i].images[j]);
 
 				if(j < (projects.projects[i].images.length-1)){
-					newHTMLprojectImage = newHTMLprojectImage+HTMLprojectImage;
+					newHTMLprojectImage = (newHTMLprojectImage+HTMLprojectImage);
 				}
 			}
 
@@ -168,9 +171,10 @@ var work = {
 	}]
 };
 work.display = function(){
+  	var i;
 	if(work.jobs.length > 0){
 		$("#workStart").prepend(HTMLworkStart);
-		for(var i=0; i < work.jobs.length; i++){//FOR LOOP EXAMPLE
+		for(i=0; i < work.jobs.length; i++){//FOR LOOP EXAMPLE
 			var newHTMLworkEmployer = HTMLworkEmployer.replace("%employer%",work.jobs[i].employer);
 			var newHTMLworkLocation = HTMLworkLocation.replace("%workLocation%",work.jobs[i].location);
 			var newHTMLworkDates = HTMLworkDates.replace("%workDates%",work.jobs[i].workDates);
@@ -228,11 +232,12 @@ var education = {
 		"onlineSchool": "Udacity",
 		"url": '<a href="https://www.udacity.com/degrees/intro-to-programming-nanodegree--nd000" target="_blank">course link</a>'
 	}]
-}
+};
 education.display = function(){
+  	var i;
 	if(education.schools.length > 0){
 		$("#educationStart").prepend(HTMLschoolStart);
-		for(var i=0; i < education.schools.length; i++){//FOR LOOP EXAMPLE
+		for(i=0; i < education.schools.length; i++){//FOR LOOP EXAMPLE
 			var newHTMLschoolDegree = HTMLschoolDegree.replace("%degree%",education.schools[i].degree);
 			var newHTMLschoolMajor = HTMLschoolMajor;
 
@@ -256,9 +261,9 @@ education.display = function(){
 	}if(education.onlineCourses.length > 0){
 		$("#onlineStart").prepend(HTMLonlineClasses);
 		for(i=0; i < education.onlineCourses.length; i++){//FOR LOOP EXAMPLE
-			var newHTMLonlineTitle = HTMLonlineTitle.replace("%title%",education.onlineCourses[i].title)
-			var newHTMLonlineDates = HTMLonlineDates.replace("%dates%",education.onlineCourses[i].dates)
-			var newHTMLonlineSchool = HTMLonlineSchool.replace("%onlineSchool%",education.onlineCourses[i].onlineSchool)
+			var newHTMLonlineTitle = HTMLonlineTitle.replace("%title%",education.onlineCourses[i].title);
+			var newHTMLonlineDates = HTMLonlineDates.replace("%dates%",education.onlineCourses[i].dates);
+			var newHTMLonlineSchool = HTMLonlineSchool.replace("%onlineSchool%",education.onlineCourses[i].onlineSchool);
 			var newHTMLonlineURL = HTMLonlineURL.replace("%url%",education.onlineCourses[i].url);
 
 			var combinedOnlineEntry = (newHTMLonlineTitle+newHTMLonlineDates+newHTMLonlineSchool+newHTMLonlineURL);
@@ -267,7 +272,7 @@ education.display = function(){
 	}else{
 		console.log("You got no skoolin'!!");
 	}
-}
+};
 education.display();
 
 $("#mapDiv").append(googleMap);

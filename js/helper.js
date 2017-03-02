@@ -279,7 +279,7 @@ map.fitBounds(mapBounds);
 
           });
         });
-    }
+    };
 }(jQuery));
 
 $('.bg-1,.bg-2,.bg-3,.bg-4').parallax({
