@@ -1,158 +1,79 @@
 /*
+
+This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
+
+Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+
+Cameron Pittman
+*/
+
+
+/*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<span>%data%, </span>'; /*Old value: <span>%data%, </span>*/
-var HTMLheaderlocation = '<span class="nav-location">%data%</span>';
-var HTMLheaderRole = '<span id="rotate"></span>';
+var HTMLheaderName = '<span>%data%,&nbsp;</span>';
+var HTMLheaderRole = '<span>%data%</span>';
 
+var HTMLcontactGeneric = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
+var HTMLmobile = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
 var HTMLemail = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
-var HTMLphone = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
 var HTMLlinkedin = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
 var HTMLgithub = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
+var HTMLblog = '<li><a href="%href%"><i class="fa %icon% fa-fw %iconSize%"></i></a>%label%</li>';
+var HTMLlocation = '<span class="nav-location">%data%</span>';
 
 var HTMLbioPic = '<img class="biopic img-responsive center-block" img src="%data%" style="width: 80%;">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLwelcomeMsg = '<span class="welcome-message white-text">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsStart = '<h1 id="skills-h3">Skills at a Glance:</h1><ul id="skills" class="container"></ul>';
+var HTMLskills = '<li class="flex-item col-xs-12 col-sm-6 col-md-2"><h4 class="orange-text">-&nbsp;%data%</h4></li>';
 
-/*new "helper" variables added by Greg Bopp to include circular percentage graphics on the page*/
-var HTMLskillsHeading = '<h1>Skills at a Glance:</h1>';
+var HTMLprojectStart = '<hr><div><h1>Projects</h1></div><hr><div class="container-fluid text-center"><div id="projects" class="row-fluid"></div></div><hr>';
 
-var HTMLskillsStart =
-  '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 text-center">\
-    <svg width="%svgWidth%" height="%svgHeight%">\
-      <g>';
+var HTMLprojectTitle =
+    '<div class="col-sm-6 col-md-6 col-lg-4 projectThumbnail">'+
+      '<a href="#myModal%modalNum%" role="button" data-toggle="modal">'+
+          '<img src="images/projects/%thumbnailImage%" alt="project-%modalNum%" class="image">'+
+          '<div class="thumbnail-overlay"><div class="thumbnailText">%overlayText%</div></div>'+
+      '</a>'+
+    '</div>'+
+    '<div class="modal fade" id="myModal%modalNum%" role="dialog">'+
+      '<div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header">'+
+      '<button type="button" class="close" data-dismiss="modal">&times;</button><h2 class="modal-title">%title% -&nbsp;';
+var HTMLprojectDates = '%dates%</h2></div><div id="carousel-project-%modalNum%" class="carousel slide" data-ride="carousel"><div class="carousel-inner">';
+var HTMLprojectImage = '<div class="item"><img class="img-responsive" src="images/projects/%projectImage%"></div>';
+var HTMLprojectDescription =
+  '</div>'+
+    '<a class="left carousel-control" href="#carousel-project-%modalNum%" role="button" data-slide="prev">'+
+      '<span class="glyphicon glyphicon-chevron-left"></span></a>'+
+    '<a class="right carousel-control" href="#carousel-project-%modalNum%" role="button" data-slide="next">'+
+      '<span class="glyphicon glyphicon-chevron-right"></span></a>'+
+  '</div><div class="modal-footer"><p><textarea readonly class="modalDescription">%description%</textarea></p></div></div></div></div>';
 
-var HTMLskills =
-        '<circle id="circleBG" cx="%svgOrigin%" cy="%svgOrigin%" r="%radius%" stroke="#f9f2ec" stroke-width="%strokeWidth%" fill="none" \
-          style="stroke-dasharray: %dashArrayShown%; stroke-dashoffset: 0;" transform="rotate(%rotateCircle% %svgOrigin% %svgOrigin%)"> \
-        </circle> \
-        <circle id="circlePercentFill" cx="%svgOrigin%" cy="%svgOrigin%" r="%radius%" stroke="%strokeColor%" stroke-width="%strokeWidth%" fill="none" \
-          style="stroke-dasharray: %svgCircumference%; stroke-dashoffset: %svgPercent%;" transform="rotate(%rotateCircle% %svgOrigin% %svgOrigin%)"> \
-        </circle>';
+var HTMLworkStart = '<h1>Work Experience</h1><div id="workEntries"></div>';
+var HTMLworkEmployer = '<div class="container workEntry"><div class="row-fluid"><div id="employer" class="col-sm-8">%employer%,&nbsp;';
+var HTMLworkLocation = '%workLocation%</div>';
+var HTMLworkDates = '<div id="workDates" class="col-sm-4">%workDates%</div><!--/#workDates--></div>';
+var HTMLworkTitle = '<div class="row-fluid"><div id="workTitle" class="col-sm-11 col-sm-offset-1">%title%</div><!--/#workTitle--></div>';
+var HTMLworkDescription =
+  '<div class="row-fluid"><div id="workDuties" class="container-fluid col-sm-11 col-sm-offset-1">'+
+    '<p><em><b>Duties:</b></em>%duties%</p></div></div></div>';
 
-  /*Thank you so much to stack overflow for showing me a simple way to make an svg rotate in internet explorer:
-    -http://stackoverflow.com/questions/6711610/how-to-set-transform-origin-in-svg*/
-          
-var HTMLskillsEnd =          
-        '<text class="svgPercentageText" x="%svgOrigin%" y="%svgPercentY%" text-anchor="middle" alignment-baseline="baseline" fill="%svgTitleColor%"> %svgPercentText%% </text> \
-        <line x1="%svgLineX1%" y1="%svgLineY%" x2="%svgLineX2%" y2="%svgLineY%" style="stroke:%svgTitleColor%; stroke-width:1.5"></line>\
-        <text class="svgPercentageTitle" x="%svgOrigin%" y="%svgTitleY%" text-anchor="middle" fill="%svgTitleColor%"> %svgTitle% </text>\
-      </g> \
-    </svg> \
-  </div><!--/.col-xs-12 col-sm-6 col-md-4 col-lg-2 text-center-->';    
-/*Circular percentage - END*/
+var HTMLschoolStart = '<h1>Education</h1><div id="educationEntries"></div>';
+var HTMLschoolDegree = '<div class="container schoolEntry"><div class="row-fluid"><div id="schoolDegree" class="col-sm-9">%degree%&nbsp;-&nbsp;';
+var HTMLschoolMajor = '%majors%';
+var HTMLschoolDates = '</div><div id="schoolDates" class="col-sm-3">%dates%</div></div>';
+var HTMLschoolName = '<div class="row-fluid"><div id="schoolName" class="col-sm-11 col-sm-offset-1"><a href="%url%" target="_blank">%name%</a></div></div>';
+var HTMLschoolLocation =
+  '<div class="row-fluid"><div id="schoolLocation" class="container-fluid col-sm-11 col-sm-offset-1">'+
+    '<p>%schoolLocation%</p></div></div></div>';
 
-
-var HTMLprojectStart = '<h1>Projects</h1>';
-
-var HTMLmodalStart = 
-    '<div class="col-sm-6 col-md-6 col-lg-4 projectThumbnail"> \
-      <a href="#myModal%modalNum%" role="button" data-toggle="modal"> \
-          <img src="images/projects/%thumbnailImage%" alt="project-%modalNum%" class="image"> \
-          <div class="thumbnail-overlay"> \
-            <div class="thumbnailText">%overlayText%</div> \
-          </div> \
-      </a> \
-    </div> \
-  <!-- Modal-%modalNum% - START--> \
-  <div class="modal fade" id="myModal%modalNum%" role="dialog"> \
-    <div class="modal-dialog modal-lg"> \
-      <div class="modal-content"> \
-        <div class="modal-header"> \
-          <button type="button" class="close" data-dismiss="modal">&times;</button> \
-          <h2 class="modal-title">%projectTitle%</h2> \
-        </div> \
-        <div id="carousel-project-%modalNum%" class="carousel slide" data-ride="carousel"> \
-          <!-- Wrapper for slides --> \
-          <div class="carousel-inner">';
-
-var HTMLmodalImages =                        
-            '<div class="item"> \
-              <img class="img-responsive" src="images/projects/%projectImage%"> \
-            </div>';
-
-var HTMLmodalEnd =                           
-          '</div> \
-          <!-- Controls - START --> \
-          <a class="left carousel-control" href="#carousel-project-%modalNum%" role="button" data-slide="prev"> \
-              <span class="glyphicon glyphicon-chevron-left"></span> \
-          </a> \
-          <a class="right carousel-control" href="#carousel-project-%modalNum%" role="button" data-slide="next"> \
-              <span class="glyphicon glyphicon-chevron-right"></span> \
-          </a> \
-          <!-- Controls - END --> \
-        </div> \
-        <div class="modal-footer"> \
-          <p><textarea readonly class="modalDescription">%description%</textarea></p> \
-        </div> \
-      </div> \
-    </div> \
-  </div><!--Modal-%modalNum%- END-->';
-
-/*
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
-
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDuties = '<p><br>%data%</p>';
-*/
-
-var HTMLworkStart = '<h1>Work Experience</h1>';
-var HTMLworkEntry = 
-  '<!--Individual Work Entry - START--> \
-  <div class="container workEntry"> \
-    <div class="row-fluid"> \
-      <div id="employer" class="col-sm-9">%employer%, %workLocation%</div><!--/#employer--> \
-      <div id="workDates" class="col-sm-3">%workDates%</div><!--/#workDates--> \
-    </div><!--/.row-fluid--> \
-    <div class="row-fluid"> \
-      <div id="workTitle" class="col-sm-11 col-sm-offset-1">%title%</div><!--/#workTitle--> \
-    </div><!--/.row-fluid--> \
-    <div class="row-fluid"> \
-      <div id="workDuties" class="container-fluid col-sm-11 col-sm-offset-1"><p><em><b>Duties:</b></em>%duties%</p></div><!--/#workDuties--> \
-    </div><!--/.row-fluid--> \
-  </div><!--/.container workEntry--> \
-  <!--Individual Work Entry - END-->';
-
-var HTMLschoolStart = '<h1>Education</h1>';
-var HTMLschoolEntry =
-  '<!--Individual Education Entry - START--> \
-  <div class="container schoolEntry"> \
-    <div class="row-fluid"> \
-      <div id="schoolDegree" class="col-sm-9">%degree%, %major%</div><!--/#schoolDegree--> \
-      <div id="schoolDates" class="col-sm-3">%dates%</div><!--/#schoolDates--> \
-    </div><!--/.row-fluid--> \
-    <div class="row-fluid"> \
-      <div id="schoolName" class="col-sm-11 col-sm-offset-1">%schoolName%</div><!--/#schoolName--> \
-    </div><!--/.row-fluid--> \
-    <div class="row-fluid"> \
-      <div id="schoolLocation" class="container-fluid col-sm-11 col-sm-offset-1"><p>%schoolLocation%</p></div><!--/#schoolLocation--> \
-    </div><!--/.row-fluid--> \
-  </div><!--/.container schoolEntry--> \
-  <!--Individual Education Entry - END-->';
-
-var HTMLonlineStart = '<h2>Online Classes</h2>';
-var HTMLonlineEntry =
-  '<!--Individual Education Entry - START--> \
-  <div class="container onlineEntry"> \
-    <div class="row-fluid"> \
-      <div id="onlineCourse" class="col-sm-9">%courseTitle%</div><!--/#onlineCourse--> \
-      <div id="onlineDates" class="col-sm-3">%dates%</div><!--/#onlineDates--> \
-    </div><!--/.row-fluid--> \
-    <div class="row-fluid align-items-end"> \
-      <div id="onlineSchool" class="col-sm-2 col-sm-offset-1">%onlineSchool%</div><!--/#onlineSchool--> \
-      <div id="onlineLink" class="col-sm-4" style="padding-top:2px;">%courseURL%</div><!--/#onlineLink--> \
-    </div><!--/.row-fluid--> \
-  </div><!--/.container onlineEntry--> \
-  <!--Individual Education Entry - END-->';
+var HTMLonlineClasses = '<h2>Online Classes</h2><div id="onlineEntries"></div>';
+var HTMLonlineTitle = '<div class="container onlineEntry"><div class="row-fluid"><div id="onlineCourse" class="col-sm-9">%title%</div>';
+var HTMLonlineDates = '<div id="onlineDates" class="col-sm-3">%dates%</div></div>';
+var HTMLonlineSchool = '<div class="row-fluid align-items-end"><div id="onlineSchool" class="col-sm-2 col-sm-offset-1">%onlineSchool%</div>';
+var HTMLonlineURL = '<div id="onlineLink" class="col-sm-4" style="padding-top:2px;">%url%</div></div></div>';
 
 var googleMap = '<div id="map"></div>';
 
@@ -193,7 +114,7 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     //locations.push(bio.contacts.location);//original
-    locations.push(bio.location);//new
+    locations.push(bio.contacts.location);//new
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
@@ -322,40 +243,40 @@ map.fitBounds(mapBounds);
  * jQuery Simple Parallax Plugin
  *
  **************************************************/
- 
+
 (function($) {
- 
+
     $.fn.parallax = function(options) {
- 
+
         var windowHeight = $(window).height();
- 
+
         // Establish default settings
         var settings = $.extend({
             speed        : 0.15
         }, options);
- 
+
         // Iterate over each object in collection
         return this.each( function() {
- 
+
           // Save a reference to the element
           var $this = $(this);
- 
+
           // Set up Scroll Handler
           $(document).scroll(function(){
- 
+
                 var scrollTop = $(window).scrollTop();
                       var offset = $this.offset().top;
                       var height = $this.outerHeight();
- 
+
         // Check if above or below viewport
       if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
         return;
       }
- 
+
       var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
                 // Apply the Y Background Position to Set the Parallax Effect
           $this.css('background-position', 'center ' + yBgPosition + 'px');
-                
+
           });
         });
     }
@@ -368,7 +289,7 @@ $('.bg-1,.bg-2,.bg-3,.bg-4').parallax({
 
 /*Greg added this for a navbar transition*/
     $(window).scroll(function() {
-      
+
       var fromTop = $('#welcomeMessage').offset();
         if($(this).scrollTop() > fromTop.top) {
             $('.navbar-fixed-top').addClass('solid');
@@ -376,7 +297,7 @@ $('.bg-1,.bg-2,.bg-3,.bg-4').parallax({
             $('.navbar-fixed-top').removeClass('solid');
         }
     });
-/*navbar END - Thank you to stack overflow for help with this scrollbar: 
+/*navbar END - Thank you to stack overflow for help with this scrollbar:
   -http://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color*/
 
 

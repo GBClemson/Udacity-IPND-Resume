@@ -8,7 +8,7 @@ i,
 h4,
 h5,
 h6, {
-  font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -17,81 +17,88 @@ h3,
 #workTitle,
 #schoolName,
 #onlineSchool {
-  font-family: 'Amaranth', sans-serif;
+    font-family: 'Amaranth', sans-serif;
 }
 
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
-  padding: 0;
-  margin: 0;  
+    padding: 0;
+    margin: 0;
 }
 
-
 body, html {
-  min-width: 420px;
-  min-height: 420px;
-  height: 100%;
-  font-size: 80%;
+    min-width: 420px;
+    min-height: 420px;
+    height: 100%;
+    font-size: 80%;
 }
 
 html, body, p, a, ul {
-  color: #663300;
+    color: #663300;
 }
 
-.main{
-  height: 100%;
+.main {
+    height: 100%;
 }
 
 .clear-fix {
-  overflow: auto;
+    overflow: auto;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+    padding: 0 5%;
 }
 
-h1 {/*Amaranth - Font*/
-  font-weight: bold;
-  font-size: 2.4em;
-  line-height: 2.5em;
-  display: inline;
+h1 {
+/*Amaranth - Font*/
+    font-weight: bold;
+    font-size: 2.4em;
+    line-height: 2.5em;
+    display: inline;
 }
 
-h2 {/*Amaranth - Font*/
-  font-weight: bold;
-  font-size: 2.0em;
-  line-height: 2.1em;
+h2 {
+/*Amaranth - Font*/
+    font-weight: bold;
+    font-size: 2.0em;
+    line-height: 2.1em;
 }
 
-h3 {/*Amaranth - Font*/
-  font-style: bold;
-  font-size: 1.6em;
-  margin-bottom: 10px;
+h3 {
+/*Amaranth - Font*/
+    font-style: bold;
+    font-size: 1.6em;
+    margin-bottom: 10px;
 }
 
-h4 {/*Lato - Font*/
-  font-weight: bold;
-  font-size: 2.0em;
-  line-height: 2.1em;
+h4 {
+/*Lato - Font*/
+    font-weight: bold;
+    font-size: 2.0em;
+    line-height: 2.1em;
 }
-h5{/*Lato - Font*/
-  font-weight: bold;
-  font-size: 1.8em;
-  line-height: 1.9em;
+
+h5 {
+/*Lato - Font*/
+    font-weight: bold;
+    font-size: 1.8em;
+    line-height: 1.9em;
 }
-h6 {/*Lato - Font*/
-  font-weight: bold;
-  font-size: 1.6em;
+
+h6 {
+/*Lato - Font*/
+    font-weight: bold;
+    font-size: 1.6em;
 }
 
 p, i, form {
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 a {
-  font-size: 1.4em;
-  text-decoration: none;
+    font-size: 1.4em;
+    text-decoration: none;
 }
 
 /*th, td {
@@ -101,33 +108,23 @@ a {
   border-bottom: 1px solid #ff6600;
 }*/
 .table>tbody>tr>td {
-  font-weight: bold;
-  font-size: 1.3em;
-  border-top: none;
-  border-bottom: 1px solid #ff6600;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-top: none;
+    border-bottom: 1px solid #ff6600;
 }
 
 .nav-location {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 ul.indent {
-  font-size: 1.4em;
-  margin-left: 10px;
-  margin-right: 0px;
-  padding-left: 10px;
-  padding-right: 0px;
+    font-size: 1.4em;
+    margin-left: 10px;
+    margin-right: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
 }
-
-
-/*
-      $("#workExperience").append(HTMLworkEmployer.replace("%data%",work.jobs[i].employer));
-      $("#workExperience").append(HTMLworkLocation.replace("%data%",work.jobs[i].workLocation));      
-      $("#workExperience").append(HTMLworkDates.replace("%data%",work.jobs[i].employmentDates));
-      $("#workExperience").append(HTMLworkTitle.replace("%data%",work.jobs[i].title));
-      $("#workExperience").append(HTMLworkDuties.replace("%data%",work.jobs[i].duties));
-      $("#workExperience").append(HTMLworkAccomplishments.replace("%data%",work.jobs[i].accomplishments));
-*/
 
 /*Styling for experience text*/
 #employer,
@@ -136,192 +133,218 @@ ul.indent {
 #schoolDates,
 #onlineCourse,
 #onlineDates {
-  font-size: 1.6em;
+    font-size: 1.6em;
 }
+
 #workTitle,
-#schoolName,
 #onlineSchool {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.6em;
 }
+
+#schoolName {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+#workDuties {
+    text-align: justify;
+}
+
 .workEntry,
 .schoolEntry,
 .onlineEntry {
-  margin: 10px -20px;
-  padding: -10px;
-  width: auto;
+    margin: 10px -20px;
+    padding: -10px;
+    width: auto;
 }
 /**/
 
 .date-text {
-  font-style: italic;
-  font-size: 1.4em;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 16px;
+    float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 1.4em;
-  line-height: 16px;
-  float: right;
-
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 16px;
+    float: right;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 1.8em;
-  line-height: 1.9em;
-}
-.welcomeBorder{
-  margin: 0;
-  padding: 0;
-  border-bottom: 10px solid #663300;
+    font-style: italic;
+    font-size: 1.9em;
+    line-height: 2.0em;
 }
 
-.orange-text{
-  color: #ff6600;
-}
-.green-text{
-  color: #00cc00;
-
-}
-.brown-text{
-  color: #663300;
-}
-.white-text{
-  color: #ffffff;
-}
-.skills-text{
-  width: 100%;
-  margin-bottom: 30px;
+.welcomeBorder {
+    margin: 0;
+    padding: 0;
+    border-bottom: 10px solid #663300;
 }
 
-.brown{
-  background-color: #4d3319;
-  color: #ffffff;
-}
-.dark-brown{
-  background-color: #3a2613;
+.orange-text {
+    color: #ff6600;
 }
 
-.brown p{
-  color: white;
+.green-text {
+    color: #00cc00;
 }
-.light-brown{
-  background-color: #f2e6d9;
+
+.brown-text {
+    color: #663300;
 }
-.light-brown-opaque{
-  background-color: rgba(242,230,217,0.75);
+
+.white-text {
+    color: #ffffff;
+}
+
+.brown {
+    background-color: #4d3319;
+    color: #ffffff;
+}
+
+.dark-brown {
+    background-color: #3a2613;
+}
+
+.brown p {
+    color: white;
+}
+
+.light-brown {
+    background-color: #f2e6d9;
+}
+
+.light-brown-opaque {
+    background-color: rgba(242,230,217,0.75);
 }
 
 #header {
-  height: 100%; /* fallback if needed */
-  height: 100vh;
+    height: 100%;
+ /* fallback if needed */
+    height: 100vh;
   /*height: calc(100% - 100px);*/
-  background-color: #918079; 
+    background-color: #918079;
 }
 
 /*This makes the items in this container to be centered both vertically and horizontally on the screen*/
 .flex-container {
-  display: -webkit-flex;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: absolute;/*previous value = fixed*/
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    display: -webkit-flex;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+/*previous value = fixed*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 /*thank you to css-tricks for helping me come up with a solution that works on ie, chrome and firefox for v and h centered content:
   -https://css-tricks.com/forums/topic/center-div-on-screen-with-flexbox/*/
 
 /*This makes the welcome message and bioRole items only be 50% of the width of the screen*/
 .flex-item-welcome {
-  width: 50%;
+    width: 50%;
 }
 /*Added by Greg Bopp to add an item that is fixed near the bottom of the home screen*/
-.flex-item-bottom{
-  width: inherit;
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
+.flex-item-bottom {
+    width: inherit;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
 }
 
 /*Greg Bopp added this to fix the location of my name to the right of my little "logo tag" that hangs down from the top of the screen*/
-.navbar-brand{
-  position: fixed;
-  left: 240px;
+.navbar-brand {
+    position: fixed;
+    left: 240px;
 }
-.navbar-fixed-top {/*old value = navbar-fixed-top*/
-  z-index: 10;
-  background-color: rgba(249,242,236,0);
-  border: 0;
-  -webkit-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* Saf3.2+, Chrome */
-     -moz-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* FF3.7+ */
-       -o-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* Opera 10.5 */
-          transition: background-color 1s ease 0s, border-color 1s ease 0s;
+
+.navbar-fixed-top {
+/*old value = navbar-fixed-top*/
+    z-index: 10;
+    background-color: rgba(249,242,236,0);
+    border: 0;
+    -webkit-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* Saf3.2+, Chrome */
+    -moz-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* FF3.7+ */
+    -o-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* Opera 10.5 */
+    transition: background-color 1s ease 0s, border-color 1s ease 0s;
 }
-.navbar-fixed-top.solid {/*navbar-fixed-top.solid*/
-  z-index: 10;
-  background-color: rgba(249,242,236,0.95);/*old color value = rgba(255,255,255,0.95)*/
-  border-color: rgba(0,0,0,0);
-  border: 0;
-  -webkit-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* Saf3.2+, Chrome */
-     -moz-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* FF3.7+ */
-       -o-transition: background-color 1s ease 0s, border-color 1s ease 0s; /* Opera 10.5 */
-          transition: background-color 1s ease 0s, border-color 1s ease 0s;
-  -webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
-     -moz-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
-          box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
+
+.navbar-fixed-top.solid {
+/*navbar-fixed-top.solid*/
+    z-index: 10;
+    background-color: rgba(249,242,236,0.95);
+/*old color value = rgba(255,255,255,0.95)*/
+    border-color: rgba(0,0,0,0);
+    border: 0;
+    -webkit-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* Saf3.2+, Chrome */
+    -moz-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* FF3.7+ */
+    -o-transition: background-color 1s ease 0s, border-color 1s ease 0s;
+ /* Opera 10.5 */
+    transition: background-color 1s ease 0s, border-color 1s ease 0s;
+    -webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
 }
 
 .navbar-right>li>a:hover {
-  background-color: transparent;
-  color: #00cc00;
-  -webkit-box-shadow: inset 0px -3px 0px 0px #ff6600;
-     -moz-box-shadow: inset 0px -3px 0px 0px #ff6600;
-          box-shadow: inset 0px -3px 0px 0px #ff6600;
+    background-color: transparent;
+    color: #00cc00;
+    -webkit-box-shadow: inset 0px -3px 0px 0px #ff6600;
+    -moz-box-shadow: inset 0px -3px 0px 0px #ff6600;
+    box-shadow: inset 0px -3px 0px 0px #ff6600;
 }
+
 .navbar-right>li>a:focus,
 .navbar-right>li>a:active,
 .navbar-left>li>a:hover,
 .navbar-left>li>a:focus,
 .navbar-left>li>a:active {
-  background-color: transparent;
-  color: #00cc00;
+    background-color: transparent;
+    color: #00cc00;
 }
 
 .navbar-left>li>a {
-  padding: 15px 10px;
+    padding: 15px 10px;
 }
 
-.logoTag{
-  z-index: 1000;
-  background: #ffa366 url(../images/vitalogyTree-Thumb.png) no-repeat center;
-  position: fixed;
-  top: -5px;
-  left: 155px;
-  width: 70px;
-  height: 90px;
-  outline: 1px dashed #ffb380;
-  outline-offset: -5px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
-     -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
-          box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+.logoTag {
+    z-index: 1000;
+    background: #ffa366 url(../images/vitalogyTree-Thumb.png) no-repeat center;
+    position: fixed;
+    top: -5px;
+    left: 155px;
+    width: 70px;
+    height: 90px;
+    outline: 1px dashed #ffb380;
+    outline-offset: -5px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
 }
 
 .glyphicon.glyphicon-menu-hamburger {
@@ -340,67 +363,63 @@ ul.indent {
 
 /*This is way to have a vertically centered object*/
 .vertical-center {
-  min-height: 100%;  /* Fallback for vh unit */
-  min-height: 100vh; /* You might also want to use
+    min-height: 100%;
+  /* Fallback for vh unit */
+    min-height: 100vh;
+ /* You might also want to use
                         'height' property instead.
-                        
+
                         Note that for percentage values of
                         'height' or 'min-height' properties,
                         the 'height' of the parent element
                         should be specified explicitly.*/
-
   /* Make it a flex container */
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   /* Align the bootstrap's container vertically */
     -webkit-box-align : center;
   -webkit-align-items : center;
        -moz-box-align : center;
        -ms-flex-align : center;
           align-items : center;
-  
+
   /* In legacy web browsers such as Firefox 9
      we need to specify the width of the flex container */
   width: 100%;
-  
+
   /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
      hence the bootstrap's container won't be aligned to the center anymore.
-  
+
      Therefore, we should use the following declarations to get it centered again */
-         -webkit-box-pack : center;
-            -moz-box-pack : center;
-            -ms-flex-pack : center;
-  -webkit-justify-content : center;
-          justify-content : center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .vertical-center-60 {
-  min-height: 60%;
-  min-height: 60vh; 
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-  
-    -webkit-box-align : center;
-  -webkit-align-items : center;
-       -moz-box-align : center;
-       -ms-flex-align : center;
-          align-items : center;
-  
-  width: 100%;
-  
-         -webkit-box-pack : center;
-            -moz-box-pack : center;
-            -ms-flex-pack : center;
-  -webkit-justify-content : center;
-          justify-content : center;
+    min-height: 60%;
+    min-height: 60vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 /*Vertically centered CSS - END*/
 
@@ -410,95 +429,117 @@ ul.indent {
 }
 
 /*This makes the cycling bioRole text white*/
-#bioRole{
-  color: white;
+#bioRole {
+    color: white;
 }
 
 /*Added by Greg Bopp to have full screen background images*/
 .bg-1 {
-  background: url(../images/farmhouse02-Brown.jpg) no-repeat center center fixed;
-  height: 100%;
-  background-size:cover;
-  background-position: center top;
+    background: url(../images/farmhouse02-Brown.jpg) no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
 }
+
 .bg-2 {
-  background: url(../images/wedding01-Clear.jpg) no-repeat center center fixed;
-  height: 130%;
-  background-size:cover;
-  background-position: center top;
+    background: url(../images/wedding01-Clear.jpg) no-repeat center center fixed;
+    height: 130%;
+    background-size: cover;
+    background-position: center top;
 }
+
 .bg-3 {
-  background: url(../images/cabin01-Brown.jpg) no-repeat center center fixed;
+    background: url(../images/cabin01-Brown.jpg) no-repeat center center fixed;
   /*height: 100%;*/
-  background-size:cover;
-  background-position: center top;
+    background-size: cover;
+    background-position: center top;
 }
+
 .bg-4 {
-  background: url(../images/farmhouse01-Brown.jpg) no-repeat center center fixed;
+    background: url(../images/farmhouse01-Brown.jpg) no-repeat center center fixed;
   /*height: 50%;*/
-  background-size:cover;
-  background-position: center top;
+    background-size: cover;
+    background-position: center top;
 }
 /*full screen background images - END*/
 
-#skillsHeading{
-  line-height: 80px;
+#skillsHeading {
+    line-height: 80px;
+}
+
+#skills {
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.skills-text {
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 /*Added by Greg Bopp to add a line above each skill in my skills section*/
-.skillsBar{
-  margin: 0px;
-  width: 100%;
-  height: 2px;
-  background-color: #ff6600;
+.skillsBar {
+    margin: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6600;
 }
 
 .transfer-title {
-  border-bottom: 1px solid #00cc00;
+    border-bottom: 1px solid #00cc00;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+  /*flex-wrap: nowrap;*/
+    padding: 10px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
-  margin: 10px;
+    list-style-type: none;
+    margin: 10px;
 }
 
 .biopic {
-  padding: 2px;
-  width: 600px;
+    padding: 2px;
+    width: 600px;
 }
 
 img {
-  padding: 0px;/*original value = 10px*/
+    padding: 0px;
+/*original value = 10px*/;
 }
 
 #bottomContacts>li {
-  font-size: 1.4em;
-  padding-left: 0px;
-  line-height: 50px;
+    font-size: 1.4em;
+    padding-left: 0px;
+    line-height: 50px;
 }
 
 #bottomContacts>li>a {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 #bottomContacts>li>a:focus,
@@ -506,70 +547,73 @@ img {
 #bottomContacts>li>a:hover,
 #bottomContacts>li>a:focus,
 #bottomContacts>li>a:active {
-  background-color: transparent;
-  color: #00cc00;
+    background-color: transparent;
+    color: #00cc00;
 }
 
-.contactFormHeader{
-  margin-bottom: 5px; 
-  border-bottom: 1px solid #00cc00;
+.contactFormHeader {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #00cc00;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    };
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 500px;
-  }
+    .biopic {
+        width: 500px;
+    };
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 400px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 400px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 500px;
-  width: 70%;
-  padding-bottom: 5%;
+    height: 500px;
+    width: 70%;
+    padding-bottom: 7%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+    #skills-h3,
   .biopic {
-    display: block;
-  }
+        display: block;
+    };
 }
 
 /*Styling for the text in each skill circle*/
-.svgPercentageText{
-  padding: 0;
-  margin: 0;
-  font-size: 2.0em;
+.svgPercentageText {
+    padding: 0;
+    margin: 0;
+    font-size: 2.0em;
 }
-.svgPercentageTitle{
-  padding: 0;
-  margin: 0;
-  font-size: 1.8em;
+
+.svgPercentageTitle {
+    padding: 0;
+    margin: 0;
+    font-size: 1.8em;
 }
 /*progress circles end - Thank you alexpate.uk for the awesome tutorial on svg circles:
 -to https://alexpate.uk/journal/pure-svg-progress-circles/*/
@@ -577,85 +621,88 @@ img {
 
 /*Modal styling*/
 .modalDescription {
-  overflow-y: scroll;
-  height: 100px;
-  width: 100%;
-  resize: none;
+    overflow-y: scroll;
+    height: 100px;
+    width: 100%;
+    resize: none;
 }
+
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-control.left,
 .carousel-control.right {
-  background-image: none;
-  color: #ff6600;
+    background-image: none;
+    color: #ff6600;
 }
 /*modal styling - end*/
 
 /*Styling for each thumbnail in my projects section*/
-.projectThumb{
-  width: 100%;
-  height: auto;
+.projectThumb {
+    width: 100%;
+    height: auto;
 }
 /*thumbnail styling - END*/
 
 /*Thumbnail overlay test - BEGIN*/
 .projectThumbnail {
-  position: relative;
+    position: relative;
 }
 
 .image {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .thumbnail-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255,102,0,0.75);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .4s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,102,0,0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .4s ease;
 }
 
 .projectThumbnail:hover .thumbnail-overlay {
-  height: 50%;
+    height: 50%;
 }
 
 .thumbnailText {
-  width: 80%;
-  color: white;
-  font-size: 1em;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 /*Thumbnail overlay test - END
   Thank you to w3schools for teaching me how to implement an overlay on my project thumbnails:
   -https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
 
-#connectHeader{
-  margin-bottom: 40px;
+#connectHeader {
+    margin-bottom: 40px;
 }
 
-.chair-caption{
-  background-color: #ff6600; 
-  padding: 15px 30px 0 30px;
-  text-indent: -1.2em; 
-}
-.chair-caption>p{
-  margin: 0;
-}
-.glyphicon-circle-arrow-left{
-  font-size: 1.4em;
+.chair-caption {
+    background-color: #ff6600;
+    padding: 15px 30px 0 30px;
+    text-indent: -1.2em;
 }
 
-.footer{
-  height: 50px;
+.chair-caption>p {
+    margin: 0;
+}
+
+.glyphicon-circle-arrow-left {
+    font-size: 1.4em;
+}
+
+.footer {
+    height: 50px;
 }
