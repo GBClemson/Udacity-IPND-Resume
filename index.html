@@ -1,451 +1,328 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <!-- Tells the browser what the title of this page should be. -->
-    <title>Greg Bopp - Portfolio</title>
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Greg Bopp - Portfolio</title>
 
-    <!-- Load the page fonts. -->
-    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!-- Load the page fonts. -->
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-    <!-- Load the js files. -->
-    <script src="js/jQuery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Load the remote js files. -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Load the page styles. -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Load the page styles. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/style.css" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-
 <body>
 
-    <!-- logo tag -->
-    <div class="container logoTag"></div>
+  <!-- logo tag -->
+  <div class="container logoTag"></div>
 
-    <!-- navigation panel -->
-    <div class="container">
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="glyphicon glyphicon-menu-hamburger"></span>
-                    </button>
-                    <!--bioName gets populated by helper.js-->
-                    <div id="bioName" class="navbar-brand"></div>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <!--#topContacts is populated by resumeBuilder.js using helper.js-->
-                    <ul id="topContacts" class="nav navbar-nav navbar-left"></ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Home</a>
-                        </li>
-                        <li><a href="#about">About</a>
-                        </li>
-                        <li><a href="#projectStart">Projects</a>
-                        </li>
-                        <li><a href="#lets-connect">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <div id="header" class="bg-1 center-content clear-fix">
-        <div class="flex-container">
-            <div class="flex-item-welcome">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 text-center welcomeBorder">
-                        <div id="welcome"></div>
-                        <div id="biopic"></div>
-                    </div>
-                </div>
-                <!--/row-END-->
-                <div class="row">
-                    <div id="welcomeMessage" class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2 text-center">
-                        <!--This is where the rotating roles from resumeBuilder.js gets populated by helper.js -->
-                        <h4 id="bioRole"></h4>
-                    </div>
-                    <!--/#welcomeMessage-->
-                </div>
-                <!--/.row-->
-                <div class="flex-item-bottom orange-text">
-                    <h3>good stuff <span class="glyphicon glyphicon-hand-down"></span> here!</h3>
-                </div>
-                <!--/.flex-item-bottom-->
-            </div>
-            <!--/.flex-item-welcome-->
+  <!-- navigation panel -->
+  <div class="container">
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+          <!--bioName gets populated by helper.js-->
+          <div id="bioName" class="navbar-brand"></div>
         </div>
-        <!--/.flex-container-->
-    </div>
-    <!--/.bg-1 center-content clear-fix-->
-
-
-    <div style="clear: both;"></div>
-
-    <div id="skillsContainer" class="container-fluid brown">
-        <div class="row-fluid">
-            <hr>
-            <div id="skillsHeading" class="container-fluid text-center"></div>
-            <!--/.skillsHeading-->
-            <hr>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <!--#topContacts is populated by resumeBuilder.js using helper.js-->
+          <ul id="topContacts" class="nav navbar-nav navbar-left"></ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projectStart">Projects</a></li>
+            <li><a href="#lets-connect">Contact</a></li>
+          </ul>
         </div>
-        <!--/.row-->
+      </div>
+    </nav>
+  </div>
+
+  <div id="header" class="bg-1 center-content clear-fix">
+    <div class="flex-container">
+      <div class="flex-item-welcome">
         <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 text-center welcomeBorder">
+          <div id="welcome"></div>
+            <div id="biopic"></div>
+          </div>
+        </div><!--/row-END-->
+        <div class="row">
+          <div id="welcomeMessage" class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2 text-center">
+            <!--This is where the rotating roles from resumeBuilder.js gets populated by helper.js -->
+            <h4 id="bioRole"></h4>
+          </div><!--/#welcomeMessage-->
+        </div><!--/.row-->
+        <div class="flex-item-bottom orange-text">
+          <h3>good stuff <span class="glyphicon glyphicon-hand-down"></span> here!</h3>
+        </div><!--/.flex-item-bottom-->
+      </div><!--/.flex-item-welcome-->
+    </div><!--/.flex-container-->
+  </div><!--/.bg-1 center-content clear-fix-->
+
+
+  <div style="clear: both;"></div>
+
+  <div id="skillsContainer" class="container-fluid brown">
+    <div class="row-fluid">
+      <hr>
+      <div id="skillsHeading" class="container-fluid text-center"></div><!--/.skillsHeading-->
+      <div id="skills" class="container-fluid text-center"></div>
+      <hr>
+    </div><!--/.row-->
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="container skills-text text-justify">
+          <h3>Skills Summary</h3>
+          <p>Although new to this industry I have spent countless hours google-fu-ing may way around the interwebs, tutorials, online courses and a lot of trial and error to build up my comfort level with front end development. I am very, very comfortable with html and css and I am quite comfortable in javascript as well. There are many aspects of js that I haven't touched on yet but what I have utilized I feel good about. I have also spent a lot of time learning and using the bootstrap framework and have become quite comfortable with that as well. I have spent less time in python but I have been able to make a website that is completely generated using data stored in multiple python files. Before I pursued programming I have spent many years in the architecture industry so I have been working out my problem solving skills for a very long time. I had made some marketing material for clients as well as a few very simple css templates and flash websites many, many years ago so I got involved with the Adobe suite of products including, photoshop, illustrator and inDesign.</p>
+        </div><!--/.container skills-text text-justify-->
+      </div><!--/.col-sm-12 col-md-12 col-lg-5-->
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="container skills-text">
+          <div class="row transfer-title"><h3>Additional Skills</h3></div><!--/.row-->
+          <div id="additionalSkills" class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="container skills-text text-justify">
-                    <h3>Skills Summary</h3>
-                    <p>Although new to this industry I have spent countless hours google-fu-ing may way around the interwebs,
-                        tutorials, online courses and a lot of trial and error to build up my comfort level with front end
-                        development. I am very, very comfortable with html and css and I am quite comfortable in javascript
-                        as well. There are many aspects of js that I haven't touched on yet but what I have utilized I feel
-                        good about. I have also spent a lot of time learning and using the bootstrap framework and have become
-                        quite comfortable with that as well. I have spent less time in python but I have been able to make
-                        a website that is completely generated using data stored in multiple python files. Before I pursued
-                        programming I have spent many years in the architecture industry so I have been working out my problem
-                        solving skills for a very long time. I had made some marketing material for clients as well as a
-                        few very simple css templates and flash websites many, many years ago so I got involved with the
-                        Adobe suite of products including, photoshop, illustrator and inDesign.</p>
-                </div>
-                <!--/.container skills-text text-justify-->
-            </div>
-            <!--/.col-sm-12 col-md-12 col-lg-5-->
+              <table class="table brown white-text">
+                <tbody>
+                  <tr><td>team player</td></tr>
+                  <tr><td>strong desire to learn</td></tr>
+                  <tr><td>communication skills</td></tr>
+                  <tr><td>problem solving skills</td></tr>
+                  <tr><td>general awesomeness</td></tr>
+                  <tr><td>growth mindset</td></tr>
+                  <tr><td>even-keeled</td></tr>
+                </tbody>
+              </table>
+            </div><!--/.col-sm-12 col-md-12 col-lg-6-->
             <div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="container skills-text">
-                    <div class="row transfer-title">
-                        <h3>Additional Skills</h3>
-                    </div>
-                    <!--/.row-->
-                    <div id="additionalSkills" class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <table class="table brown white-text">
-                                <tbody>
-                                    <tr>
-                                        <td>team player</td>
-                                    </tr>
-                                    <tr>
-                                        <td>strong desire to learn</td>
-                                    </tr>
-                                    <tr>
-                                        <td>communication skills</td>
-                                    </tr>
-                                    <tr>
-                                        <td>problem solving skills</td>
-                                    </tr>
-                                    <tr>
-                                        <td>general awesomeness</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--/.col-sm-12 col-md-12 col-lg-6-->
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <table class="table brown white-text">
-                                <tbody>
-                                    <tr>
-                                        <td>growth mindset</td>
-                                    </tr>
-                                    <tr>
-                                        <td>even-keeled</td>
-                                    </tr>
-                                    <tr>
-                                        <td>wearing lots of hats</td>
-                                    </tr>
-                                    <tr>
-                                        <td>more growth mindset</td>
-                                    </tr>
-                                    <tr>
-                                        <td>can you tell that I wanted one more item here?</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--/.col-sm-12 col-md-12 col-lg-6-->
-                    </div>
-                    <!--/#additionalSkills-->
-                </div>
-                <!--/.container-->
-            </div>
-            <!--/.col-xs-12 col-sm-5 col-md-4 col-lg-6 text-center-->
-        </div>
-        <!--/.row-->
-    </div>
-    <!--/#skillsContainer-->
+              <table class="table brown white-text">
+                <tbody>
+                  <tr><td>wearing lots of hats</td></tr>
+                  <tr><td>more growth mindset</td></tr>
+                  <tr><td>making delicious chicken wings...</td></tr>
+                  <tr><td>...as seen above in the "skills at a glance" area...</td></tr>
+                  <tr><td>... that's there to show off my skills circle generator...</td></tr>
+                  <tr><td>...check it out in resumeBuilder.js</td></tr>
+                  <tr><td>can you tell that I wanted one more item here?</td></tr>
+                </tbody>
+              </table>
+            </div><!--/.col-sm-12 col-md-12 col-lg-6-->
+          </div><!--/#additionalSkills-->
+        </div><!--/.container-->
+      </div><!--/.col-xs-12 col-sm-5 col-md-4 col-lg-6 text-center-->
+    </div><!--/.row-->
+  </div><!--/#skillsContainer-->
 
     <!--2nd Parallax image -->
     <div id="about" class="bg-2 center-content clear-fix">
-        <div class="row-fluid">
-            <div class="col-xs-12 col-sm-7 col-sm-offset-4 col-md-5 col-md-offset-5 col-lg-4 col-lg-offset-5 light-brown-opaque">
-                <h2 class="text-center">A little about me</h2>
-                <p class="text-justify">You are probably wondering, why in the world does this yahoo have a picture of what kind of looks like a
-                    wedding placed fairly prominately on his website? Well... Since you asked... This is in fact my wedding.
-                    I am that smiling guy on the right and my lovely, amazing wife is that cute little doll in the white
-                    dress. This picture is an excellent representation of who I am as a person and what I bring to your team.
-                    At first glance it may seem odd... A beach, dead trees, living room furniture, chandelier hanging from
-                    a tree, that really bright chair in the foreground, random objects strewn about. Even though it's a bit
-                    strange, it somehow seems coherent, well designed / planned and everything just seems to come together
-                    to create a beautiful scene. BTW, that mantle leaned up against a tree... I ripped off the wall at my
-                    house and brought it with me to the wedding as I thought it would look cool and really "tie the room
-                    together". The officiant, the photographer, the people passing by... Everybody was blown away by how
-                    cool the ceremony was. Thinking outside the box is what my wife and I did here and that midset will be
-                    brought to your team. I love to laugh and have a good time but my wife and I had to work
-                    <b>really hard</b> to pull off this wedding in about 6 weeks (we even reupholstered a couple of chairs).
-                    The moral of the story?... Smile, have a blast, don't worry about the haters, put your head down... work
-                    like crazy... create something amazing. That is what I intend to do every single day on your team and
-                    I look forward to that opportunity.</p>
-            </div>
-            <!--/.col-md-4 col-md-offset-5-->
-        </div>
-    </div>
-    <!--/.parallaxBG2-->
+      <div class="row-fluid">
+        <div class="col-xs-12 col-sm-7 col-sm-offset-4 col-md-5 col-md-offset-5 col-lg-4 col-lg-offset-5 light-brown-opaque">
+          <h2 class="text-center">A little about me</h2>
+          <p class="text-justify">You are probably wondering, why in the world does this yahoo have a picture of what kind of looks like a wedding placed fairly prominately on his website? Well... Since you asked... This is in fact my wedding. I am that smiling guy on the right and my lovely, amazing wife is that cute little doll in the white dress. This picture is an excellent representation of who I am as a person and what I bring to your team. At first glance it may seem odd... A beach, dead trees, living room furniture, chandelier hanging from a tree, that really bright chair in the foreground, random objects strewn about. Even though it's a bit strange, it somehow seems coherent, well designed / planned and everything just seems to come together to create a beautiful scene. BTW, that mantle leaned up against a tree... I ripped off the wall at my house and brought it with me to the wedding as I thought it would look cool and really "tie the room together". The officiant, the photographer, the people passing by... Everybody was blown away by how cool the ceremony was. Thinking outside the box is what my wife and I did here and that midset will be brought to your team. I love to laugh and have a good time but my wife and I had to work <b>really hard</b> to pull off this wedding in about 6 weeks (we even reupholstered a couple of chairs). The moral of the story?... Smile, have a blast, don't worry about the haters, put your head down... work like crazy... create something amazing. That is what I intend to do every single day on your team and I look forward to that opportunity.</p>
+        </div><!--/.col-md-4 col-md-offset-5-->
+      </div>
+    </div><!--/.parallaxBG2-->
     <!--/2nd Parallax area-->
 
-    <!--#projectStart is populated with thumbnails and modals for each project by resumeBuilder.js-->
-    <div id="projectStart" class="container-fluid text-center light-brown"></div>
-    <!--/#projectStart-->
+    <div class="container-fluid text-center light-brown">
+      <hr>
+      <div id="projectStart"></div>
+      <hr>
+      <!--MODAL BEGIN-->
+      <div class="container-fluid text-center">
+        <!--This is where each project / modal gets populated by helper.js and resumeBuilder.js -->
+        <div id="projects" class="row-fluid"></div><!--/#projects-->
+      </div><!--Modal Container - END-->
+      <hr>
+    </div><!--/container-->
 
     <!--3rd parallax image - Contains both work and education-->
     <div id="experience" class="bg-3 center-content clear-fix">
-        <div class="container vertical-center" style="position: relative;">
-            <div class="row-fluid">
+      <div class="container vertical-center" style="position: relative;">
+        <div class="row-fluid">
 
-                <div class="container-fluid col-sm-12 col-md-6 col-lg-6 light-brown-opaque">
-                    <div class="container" style="width: 100%;">
-                        <hr>
-                        <div id="workStart"></div>
-                        <!--/#workStart-->
-                    </div>
-                    <!--/.container-->
-                    <hr>
-                </div>
-                <!--/.container-fluid col-sm-12 col-md-6 col-lg-6 light-brown-->
+          <div class="container-fluid col-sm-12 col-md-6 col-lg-6 light-brown-opaque">
+            <div class="container" style="width: 100%;">
+              <hr>
+              <div id="workStart"></div><!--/#workStart-->
+              <div id="workEntries"></div><!--/#workEntries-->
+              <hr>
+            </div><!--/.container-->
+          </div><!--/.container-fluid col-sm-12 col-md-6 col-lg-6 light-brown-->
 
-                <!--extra column to put some space between the two other columns-->
-                <div class="container-fluid col-sm-12 col-md-1 col-lg-1"></div>
+          <!--extra column to put some space between the two other columns-->
+          <div class="container-fluid col-sm-12 col-md-1 col-lg-1"></div>
 
-                <div class="container-fluid col-sm-12 col-md-5 col-lg-5 light-brown-opaque">
-                    <div class="container-fluid" style="width: 100%;">
-                        <hr>
-                        <!--helper.js populates the next two divs with education data from resumeBuilder.js-->
-                        <div id="educationStart"></div>
-                        <!--/#educationStart-->
-                        <div id="onlineStart"></div>
-                        <!--/#onlineStart-->
-                        <hr>
-                    </div>
-                </div>
+          <div class="container-fluid col-sm-12 col-md-5 col-lg-5 light-brown-opaque">
+            <div class="container-fluid" style="width: 100%;">
+              <hr>
+              <!--helper.js populates the next two divs with online education data from resumeBuilder.js-->
+              <div id="educationStart"></div><!--/#educationStart-->
+              <div id="educationEntries"></div><!--/#educationEntries-->
 
+              <!--helper.js populates the next two divs with online education data from resumeBuilder.js-->
+              <div id="onlineStart"></div><!--/#onlineStart-->
+              <div id="onlineEntries"></div><!--/#onlineEntries-->
+              <hr>
             </div>
-            <!--/row-->
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/.bg-3-->
+          </div>
+
+        </div><!--/row-->
+      </div><!--/.container-->
+    </div><!--/.parallaxBG3-->
     <!--/3rd Parallax area-->
 
     <div class="container-fluid light-brown text-center">
-        <hr>
+      <hr>
         <div id="mapDiv" class="center-block">
-            <h1>Where I've Lived and Worked</h1>
-            <hr>
+          <h1>Where I've Lived and Worked</h1>
+          <hr>
         </div>
-        <hr>
-    </div>
-    <!--/container for map-->
+      <hr>
+    </div><!--/container for map-->
 
     <!--4th parallax image - Contains a closing statement-->
     <div class="bg-4 center-content clear-fix">
-        <div class="container vertical-center-60" style="position: relative;">
-            <div class="row">
-                <div class="col-md-12 light-brown-opaque text-justify">
-                    <hr>
-                    <div id="closingText">
-                        <h2>In Closing...</h2>
-                        <p>I am so thankful that you have taken a few precious moments out of your busy day to browse through
-                            the site. I tried to show off some new found skills (the main achievement being this very website)
-                            as well as letting folks know about some other skills... delicious chicken wings anyone? Hopefully
-                            you have enjoyed your time here and maybe even cracked a smile or two. I have tried to be as
-                            transparent as possible so that you can see what it would be like with me as your newest team
-                            member. Hopefully, your interest has been piqued and your company works really hard, creates
-                            amazing websites and apps but you still find time to let loose once in a while. Although new
-                            to the industry, I have learned a ton in a short amount of time. I have become very comfortable
-                            with html, css, bootstrap and have been able to do some fairly basic but pretty cool things with
-                            javascript as well. Sidenote... When I was able to make those skills percentage circles abaove
-                            work even when the value was over 100%, <b>I was ecstatic</b>! They still need some additional
-                            intelligence to prevent the user from going too high with the percentage leaving the viewer with
-                            an unreadable graphic but for now, I am very pleased with how it works. As I put my growth mindset
-                            to work, spend more time googling and figuring out how to overcome problems, my interest in doing
-                            this for a living has increased exponentially. If you would like to chat, please reach out by
-                            hitting links in the botom of the page or the top of the screen. I look forward to learning about
-                            any oportunities that you may have.</p>
-                        <h6>Thanks so much and have a great day!</h6>
-                        <h1>Greg Bopp</h1>
-                    </div>
-                    <hr>
-                </div>
-                <!--/.container-fluid col-md-12 light-brown-opaque-->
-            </div>
-            <!--/row-->
-        </div>
-        <!--/.container vertical-center-60-->
-    </div>
-    <!--/.bg-4 center-content clear-fix-->
+      <div class="container vertical-center-60" style="position: relative;">
+        <div class="row">
+          <div class="col-md-12 light-brown-opaque text-justify">
+            <hr>
+              <div id="closingText"><h2>In Closing...</h2><p>I am so thankful that you have taken a few precious moments out of your busy day to browse through the site. I tried to show off some new found skills (the main achievement being this very website) as well as letting folks know about some other skills... delicious chicken wings anyone? Hopefully you have enjoyed your time here and maybe even cracked a smile or two. I have tried to be as transparent as possible so that you can see what it would be like with me as your newest team member. Hopefully, your interest has been piqued, your company works really hard, creates amazing websites and apps but you still find time to let loose once in a while. Although new to the industry, I have learned a ton in a short amount of time. I have become very comfortable with html, css, bootstrap and have been able to do some fairly basic but pretty cool things with javascript as well. Sidenote... When I was able to make the skills percentage circles above work even when the value was over 100%, <b>I was ecstatic</b>! They still need some additional intelligence to prevent the user from going too high with the percentage leaving the viewer with an unreadable graphic but for now, I am very pleased with how it works. As I put my growth mindset to work, spend more time googling and figuring out how to overcome problems, my interest in doing this for a living has increased exponentially. If you would like to chat, please reach out by hitting links in the botom of the page or the top of the screen. I look forward to learning about any oportunities that you may have.</p><h6>Thanks so much and have a great day!</h6><h1>Greg Bopp</h1>
+              </div>
+            <hr>
+          </div><!--/.container-fluid col-md-12 light-brown-opaque-->
+        </div><!--/row-->
+      </div><!--/.container vertical-center-60-->
+    </div><!--/.bg-4 center-content clear-fix-->
     <!--/4th Parallax area-->
 
     <div id="lets-connect" class="container-fluid brown">
-        <div class="container" style="margin-bottom: 10px;">
+      <div class="container" style="margin-bottom: 10px;">
 
+        <div class="row">
+          <div id="connectHeader" class="col-md-12">
+            <hr>
+            <h1 class="orange-text">Let's Connect</h1>
+            <h3 class="white-text">Shoot me an email or reach out on social media</h3>
+            <hr>
+          </div><!--/#connectHeader-->
+        </div><!--/.row-->
+
+        <!--This "row" contains all of the content that is in the lets connect area other than the header bar-->
+        <div class="row">
+
+          <div class="col-md-6">
             <div class="row">
-                <div id="connectHeader" class="col-md-12">
-                    <hr>
-                    <h1 class="orange-text">Let's Connect</h1>
-                    <h3 class="white-text">Shoot me an email or reach out on social media</h3>
-                    <hr>
+              <div class="container col-md-12">
+                <p>Thanks again for stopping by! Please reach out if you have any questions, would like to know more about me and what I am working on or if you just want to chat.</p>
+              </div><!--/.container-->
+            </div><!--/.row-->
+            <div class="row">
+              <div class="container" style="width: 100%">
+
+                <div class="col-xs-6 col-md-6">
+                  <img class="img-responsive" img src="images/weddingChair-01.JPG">
                 </div>
-                <!--/#connectHeader-->
-            </div>
-            <!--/.row-->
 
-            <!--This "row" contains all of the content that is in the lets connect area other than the header bar-->
-            <div class="row">
+                <div class="col-xs-6 col-md-6" style="background-color: #009900;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="orange-text" style="border-bottom: 1px solid #ff6600;">Connect with me:</h2>
+                      <!--The contact icons get populated by helper.js and resumeBuilder.js -->
+                      <ul id="bottomContacts" class="col-md-12"></ul>
+                    </div><!--/.col-md-12-->
+                  </div><!--/.row-->
+
+                  <div class="row">
+                    <div class="col-md-12 chair-caption">
+                      <p><span class="glyphicon glyphicon-circle-arrow-left"></span> this super rare artifact is the "chair of heightened thought". It gives inspiration +2 to the user. This comes in real handy when solving web-development problems.</p>
+                      <!--The contact icons get populated by helper.js and resumeBuilder.js -->
+                      <ul id="bottomContacts" class="col-md-12"></ul>
+                    </div><!--/.col-md-12-->
+                  </div><!--/.row-->
+
+                </div><!--/.col-md-6-->
+
+              </div><!--/.container-->
+            </div><!--/.row-->
+          </div><!--/.container-->
+
+          <div class="col-md-6">
+            <form>
+
+              <div class="row contactFormHeader">
+                <div class="container col-md-12 green-text">
+                  <h3>Contact Form</h3>
+                </div><!--/.container-->
+              </div><!--/.row-->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group"> <!-- Name field -->
+                    <label class="control-label " for="name">Name</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="name"/>
+                  </div>
+                </div>
 
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="container col-md-12">
-                            <p>Thanks again for stopping by! Please reach out if you have any questions, would like to know
-                                more about me and what I am working on or if you just want to chat.</p>
-                        </div>
-                        <!--/.container-->
-                    </div>
-                    <!--/.row-->
-                    <div class="row">
-                        <div class="container" style="width: 100%">
-
-                            <div class="col-xs-6 col-md-6">
-                                <img class="img-responsive" img src="images/weddingChair-01.JPG">
-                            </div>
-
-                            <div class="col-xs-6 col-md-6" style="background-color: #009900;">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h2 class="orange-text" style="border-bottom: 1px solid #ff6600;">Connect with me:</h2>
-                                        <!--The contact icons get populated by helper.js and resumeBuilder.js -->
-                                        <ul id="bottomContacts" class="col-md-12"></ul>
-                                    </div>
-                                    <!--/.col-md-12-->
-                                </div>
-                                <!--/.row-->
-
-                                <div class="row">
-                                    <div class="col-md-12 chair-caption">
-                                        <p><span class="glyphicon glyphicon-circle-arrow-left"></span> this super rare artifact
-                                            is the "chair of heightened thought". It gives inspiration +2 to the user. This
-                                            comes in real handy when solving web-development problems.
-                                        </p>
-                                        <!--The contact icons get populated by helper.js and resumeBuilder.js -->
-                                        <ul id="bottomContacts" class="col-md-12"></ul>
-                                    </div>
-                                    <!--/.col-md-12-->
-                                </div>
-                                <!--/.row-->
-
-                            </div>
-                            <!--/.col-md-6-->
-
-                        </div>
-                        <!--/.container-->
-                    </div>
-                    <!--/.row-->
+                  <div class="form-group"> <!-- Email field -->
+                    <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                    <input class="form-control" id="email" name="email" type="email"  placeholder="email"/>
+                  </div>
                 </div>
-                <!--/.container-->
+              </div><!--/.row-->
 
-                <div class="col-md-6">
-                    <form>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group"> <!-- Subject field -->
+                    <label class="control-label " for="subject">Subject</label>
+                    <input class="form-control" id="subject" name="subject" type="text"  placeholder="subject"/>
+                  </div>
+                  <div class="form-group"> <!-- Message field -->
+                    <label class="control-label " for="message">Message</label>
+                    <textarea class="form-control" cols="40" id="message" name="message" rows="8"  placeholder="This is not a functioning contact form. I did not want to get into php and POST commands for this assignment so for now it is only for looks. Once I get my actual portfolio / resume site online I will then address the issue of having an email sent to me when this is filled out. Thanks, Greg Bopp"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-default " name="submit" type="submit">Submit</button>
+                  </div>
+                </div><!--/.col-md-12-->
+              </div><!--/.row-->
 
-                        <div class="row contactFormHeader">
-                            <div class="container col-md-12 green-text">
-                                <h3>Contact Form</h3>
-                            </div>
-                            <!--/.container-->
-                        </div>
-                        <!--/.row-->
+            </form>
+          </div><!--/.col-md-6-->
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <!-- Name field -->
-                                    <label class="control-label " for="name">Name</label>
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="name" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <!-- Email field -->
-                                    <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span>
-                                    </label>
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="email" />
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.row-->
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <!-- Subject field -->
-                                    <label class="control-label " for="subject">Subject</label>
-                                    <input class="form-control" id="subject" name="subject" type="text" placeholder="subject" />
-                                </div>
-                                <div class="form-group">
-                                    <!-- Message field -->
-                                    <label class="control-label " for="message">Message</label>
-                                    <textarea class="form-control" cols="40" id="message" name="message" rows="8" placeholder="This is not a functioning contact form. I did not want to get into php and POST commands for this assignment so for now it is only for looks. Once I get my actual portfolio / resume site online I will then address the issue of having an email sent to me when this is filled out. Thanks, Greg Bopp"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-default " name="submit" type="submit">Submit</button>
-                                </div>
-                            </div>
-                            <!--/.col-md-12-->
-                        </div>
-                        <!--/.row-->
-
-                    </form>
-                </div>
-                <!--/.col-md-6-->
-
-            </div>
-            <!--/.row-->
-            <!--This "row" contains all of the content that is in the lets connect area other than the header bar-->
+        </div><!--/.row--><!--This "row" contains all of the content that is in the lets connect area other than the header bar-->
 
 
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/#lets-connect-->
+      </div><!--/.container-->
+    </div><!--/#lets-connect-->
 
     <div class="container-fluid dark-brown footer">
-        <div class="container">
-            <div class="row vertical-align-center">
-                <div class="col-md-12">
-                    <p class="green-text" style="line-height: 48px;"> &copy; 2017 Greg Bopp </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row vertical-align-center">
+          <div class="col-md-12">
+            <p class="green-text" style="line-height: 48px;"> &copy; 2017 Greg Bopp </p>
+          </div>
         </div>
-        <!--/.container-->
+      </div><!--/.container-->
     </div>
-    <!--/.container-fluid-->
 
-    <script src="js/helper.js"></script>
-    <script src="js/resumeBuilder.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA3pMHxnYBQbfC4hMXPBlgpT2U_gCTAp-g" type="text/javascript"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/resumeBuilder.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA3pMHxnYBQbfC4hMXPBlgpT2U_gCTAp-g" type="text/javascript"></script>
 
 </body>
-
 </html>
