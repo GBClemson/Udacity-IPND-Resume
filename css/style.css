@@ -137,16 +137,11 @@ ul.indent {
 }
 
 #workTitle,
-#onlineSchool {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 1.6em;
-}
-
+#onlineSchool,
 #schoolName {
     font-weight: bold;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.6em;
 }
 
 #workDuties {
