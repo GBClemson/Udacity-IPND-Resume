@@ -327,14 +327,14 @@ var work = {
 	{
 		"employer": "AT&T",
 		"location": "Atlanta, GA",
-		"workDates": "06/17 - Retirement",
+		"workDates": "06/17 - 12/42",
 		"title": "Application Developer",
 		"duties": "Assist with developing new websites and web applications that meet the needs of internal teams. Participate in UI/UX design \
 			as well as programming in many different languages. Someday, will be team lead and hopefully a technical director after that."
 	},{
 		"employer": "AT&T",
 		"location": "Greenville, SC",
-		"workDates": "11/14 - Present",
+		"workDates": "11/14 - 03/17",
 		"title": "Account Executive",
 		"duties": "Support for staff at both national retailers such as best buy and sam's club as well as AT&T authorized retailers. Point of \
 			contact for customer escalations and account issues."
